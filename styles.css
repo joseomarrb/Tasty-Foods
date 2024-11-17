@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Artifika&family=Berkshire+Swash&family=Creepster&family=Dancing+Script:wght@400..700&family=Faculty+Glyphic&family=Gideon+Roman&family=Great+Vibes&family=Kalam:wght@300;400;700&family=League+Spartan:wght@100..900&family=Lobster&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Nosifer&family=Noto+Sans+Miao&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Prociono&family=Proza+Libre:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Salsa&family=Sixtyfour+Convergence&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Tai+Heritage+Pro:wght@400;700&family=Trade+Winds&display=swap');
+
+:root{
+    --salsa: "Salsa", cursive;
+    --red: rgb(235, 2, 2);
+    --yellow: rgb(251, 195, 10);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+}
+
+.header {
+    display: flex;
+    padding: 10px 25px;
+    align-items: center;
+    width: 100%;
+    border-bottom: thin solid #0003;
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.nav__button {
+    display: block;
+}
+
+#button-bars{
+    background-color: transparent;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px 25px;
+    border: none;
+    transition: all .2s ease-in;
+}
+
+#button-bars:hover{
+    color: var(--red);
+}
+
+.nav__horario {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 8px ;
+}
+
+.nav__about {
+    display: none;
+    align-items: center;
+    gap: 15px;
+}
+
+h1{
+    font-size: 62px;
+    font-family: "Salsa", cursive;
+    color: rgb(235, 2, 2);
+}
+
+
+.main .header{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-wrap: wrap;
+}
+
+.main__header{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    padding: 5px 25px;
+    align-items: center;
+    width: 100%;
+}
+
+.main__header span{
+    position: absolute;
+    left: 65px;
+    bottom: -7px;
+    font-family: "Salsa", cursive;
+    font-size: 24px;
+}
+
+.welcome, .welcome span{
+    font-weight: bolder;
+    text-align: center;
+    text-wrap: wrap;
+    font-family: var(--salsa);
+    font-size: 44px;
+}
+
+.welcome span{
+    color: var(--red);
+}
+
+.header__list {
+    display: none;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    text-wrap: wrap;
+    gap: 30px;
+}
+
+.list-items {
+    font-size: 18px;
+}
+
+.buttons-container{
+    display: none;
+    align-items: center;
+    gap: 12px;
+}
+
+.btn{
+    font-size: 16px;
+    font-family: sans-serif;
+    max-width: 150px;
+    height: 45px;
+    border-radius: 26px;
+    border: none;
+    cursor: pointer;
+}
+
+#calendary{
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+    font-size: 16px;
+    background-color: #fff;
+    border-color: #0003;
+    border-radius: 50%;
+}
+
+.main__content{
+    display: flex;
+    padding: 40px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__text{
+    display: flex;
+    flex-direction: column;
+}
+
+.text__paragraph{
+    text-align: center;
+    margin: 26px 0;
+    font-family: sans-serif;
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+.text__buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.text__buttons .btn{
+    width: 160px;
+    font-family: sans-serif;
+    font-size: 16px;
+    background-color: var(--yellow);
+    color: #000;
+}
+
+.text__buttons .btn-secundary{
+    background-color: #fff;
+    border: 3px solid #0003;
+}
+
+.main__img__container{
+    width: 100%;
+}
+
+.main__img__container img{
+    width: 100%;
+}
