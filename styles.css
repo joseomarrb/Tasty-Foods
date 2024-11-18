@@ -1,9 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Artifika&family=Berkshire+Swash&family=Creepster&family=Dancing+Script:wght@400..700&family=Faculty+Glyphic&family=Gideon+Roman&family=Great+Vibes&family=Kalam:wght@300;400;700&family=League+Spartan:wght@100..900&family=Lobster&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Nosifer&family=Noto+Sans+Miao&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Prociono&family=Proza+Libre:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Salsa&family=Sixtyfour+Convergence&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Tai+Heritage+Pro:wght@400;700&family=Trade+Winds&display=swap');
 
 :root{
+    --width: 100%;
     --salsa: "Salsa", cursive;
     --red: rgb(235, 2, 2);
     --yellow: rgb(251, 195, 10);
+    --gray: rgb(237, 235, 233);
+    --gray-favorite: rgb(207, 206, 205);
+    --black: rgba(0, 0, 0, 0.8);
 }
 
 *{
@@ -93,6 +97,7 @@ h1{
     bottom: -7px;
     font-family: "Salsa", cursive;
     font-size: 24px;
+    color: #000;
 }
 
 .welcome, .welcome span{
@@ -173,9 +178,10 @@ h1{
     justify-content: center;
     flex-direction: column;
     gap: 16px;
+    margin: 12px;
 }
 
-.text__buttons .btn{
+.btn{
     width: 160px;
     font-family: sans-serif;
     font-size: 16px;
@@ -183,7 +189,7 @@ h1{
     color: #000;
 }
 
-.text__buttons .btn-secundary{
+.btn-secundary{
     background-color: #fff;
     border: 3px solid #0003;
 }
@@ -194,4 +200,440 @@ h1{
 
 .main__img__container img{
     width: 100%;
+}
+
+.products{
+    padding: 40px;
+    width: var(--width);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px   ;
+    background-color: #f5f5f5;
+}
+
+.products--item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+}
+
+.item__name{
+    font-size: 34px;
+    font-family: var(--salsa);
+    font-weight: bold   ;
+    text-align: center;
+}
+
+.products__img{
+    width: 100%;
+    max-width: 250px;
+}
+
+.img2{
+    max-width: 200px;
+}
+
+.img3{
+    max-width: 300px;
+}
+
+.color-cards{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    width: var(--width);
+}
+
+
+.color__card--text{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-left: 30px;
+}
+.color__card--text p, h4, span{
+    color: #fff;
+    font-family: var(--salsa);
+}
+
+.card--name{
+    font-size:42px;
+}
+
+.card--details{
+    text-wrap: wrap;
+    font-size: 18px;
+}
+
+.card--details span{
+    font-weight: bold;
+}
+
+.card--price{
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.color__card{
+    display: flex;
+    max-width: 450px;
+    padding: 20px 0;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+
+.color__card--img img{
+    width: 100%;
+    max-width: 200px;
+}
+
+.card--yellow{
+    background-color: var(--yellow);
+}
+
+.card--black{
+    background-color: var(--black);
+}
+
+.card--red{
+    background-color: var(--red);
+}
+
+.about{
+    padding: 14px;
+}
+
+.about .welcome{
+    margin-bottom: 15px;
+}
+
+.about .main__text .text__paragraph{
+    margin: 10px 5px;
+}
+
+.about__list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+    margin: 20px;
+    font-family: sans-serif;
+    font-size: 18px;
+    text-align: center
+}
+
+.about__list .fa-circle-check{
+    padding: 5px;
+    color: var(--red);
+}
+
+.products--delivery{
+    gap: 3px;
+}
+
+.cards__news{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px   ;
+    padding-bottom: 40px;
+}
+
+.news__card{
+    max-width: 350px;
+    border: 3px solid #0002;
+    border-radius: 20px;
+}
+
+.news__card--img{
+    width: 100%;
+}
+
+.news__card--img img{
+    width: 100%;
+    border-radius: 20px 20px 0 0 ;
+    max-width: 350px;
+}
+
+.news__card--text{
+    padding: 20px 0 30px 0;
+    text-align: center;
+}
+
+.news__card--title{
+    font-family: var(--salsa);
+    font-size: 28px;
+    margin-bottom: 14px;
+}
+
+.card--paragraph{
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+
+.feedback-cards{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+}
+
+.feed-card-img{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 30px;
+}
+
+.feed-card-img img{
+    border-radius: 16px;
+    max-width: 130px;
+}
+
+.feedback-card{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 2px 2px 2px 2px #0005;
+    max-width: 450px;
+}
+
+.feedback-text{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 30px 30px 0 30px;
+}
+
+.stars{
+    display: flex;
+    gap: 5px;
+    flex-direction: row;
+}
+
+.stars i {
+    color: var(--yellow);
+}
+
+.feedcard--paragraph{
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.person-name{
+    font-family: var(--salsa);
+    font-size: 24px;
+}
+
+.person-position{
+    font-family: var(--salsa);
+    color: #0009;
+}
+
+.gallery-imgs{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+    padding-bottom: 50px;
+}
+
+.img-gallery{
+    width: 100%;
+    max-width: 500px;
+}
+
+.footer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-paragraph{
+    font-family: var(--salsa);
+    margin: 10px 0;
+    color: #0009;
+}
+
+.textos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+}
+
+.books{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.book-name{
+    font-family: var(--salsa);
+    font-size: 20px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.book-detalles{
+    font-family: var(--salsa);
+    font-size: 18px;
+    color: var(--red);
+    font-weight: bold;
+}
+
+.footer__links{
+    text-decoration: none;
+    color: #000;
+}
+
+.books i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.book-item{
+    display: flex;
+    align-items: center;
+    gap: 12px   ;
+}
+
+.footer__logo{
+    position: relative;
+}
+
+.footer__logo span{
+    position: absolute;
+    bottom: -15px;
+    right: 35px;
+
+    font-family: "Salsa", cursive;
+    font-size: 24px;
+    color: #000;
+}
+
+.popular__content-buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.popular__content-buttons .popular-btn{
+    transition: all .2s ease;
+}
+
+.popular-btn:hover{
+    background-color: var(--red);
+    color: #fff;
+}
+
+.popular__img{
+    width: 100%;
+    max-width: 150px;
+}
+
+
+.popular-card{
+    padding: 20px;
+    border: 3px solid #0003;
+    text-align: center;
+    border-radius: 18px;
+}
+
+.popular-cards-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px 0;
+}
+
+.popular-name{
+    font-family: var(--salsa);
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.popular-details{
+    text-wrap: wrap;
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+.popular-price{
+    color: var(--red);
+    font-size: 24px;
+    font-family: var(--salsa);
+    font-weight: bolder;
+}
+
+.button-favorite{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.button-favorite button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.button-favorite button i{
+    font-size: 26px;
+    color: var(--gray-favorite);
+    transition: all .2s ease;
+}
+
+.button-favorite button i:hover{
+    color: var(--yellow);
+}
+
+.popular-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.all-btn{
+    background-color: var(--red);
+    color: #fff;
 }
