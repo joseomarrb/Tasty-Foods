@@ -3,7 +3,10 @@ const newsSection = document.querySelector('#news-sc');
 const gallerySection = document.querySelector('#gallery-imgs');
 const feedbackSection = document.querySelector('#feedback-cards');
 const productsSection = document.querySelector('#products');
-const viewProductsSection = document.querySelector('#view-products');
+
+const btnBars = document.querySelector('#button-bars');
+const dropdown = document.querySelector('.dropdown-menu');
+const btnClose = document.querySelector('#button-bars i');
 
 //Eventos
 document.addEventListener("DOMContentLoaded", () => {
@@ -11,6 +14,14 @@ document.addEventListener("DOMContentLoaded", () => {
     crearGallery(gallery); 
     crearFeedbacks(feedbacks);
     crearProducts(products);
+});
+
+btnBars.addEventListener('click', () => {
+    dropdown.classList.toggle('oculto');
+    const isOpen = dropdown.classList.contains('oculto');
+    btnClose.classList = isOpen
+    ? "fa-solid fa-bars"
+    : 'fa-solid fa-x';
 });
 
 //Funciones
