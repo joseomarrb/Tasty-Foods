@@ -10,10 +10,10 @@ const btnClose = document.querySelector('#button-bars i');
 
 //Eventos
 document.addEventListener("DOMContentLoaded", () => {
-    crearNews(news); 
-    crearGallery(gallery); 
-    crearFeedbacks(feedbacks);
-    crearProducts(products);
+    createNews(news); 
+    createGallery(gallery); 
+    createFeedbacks(feedbacks);
+    createProducts(products);
 });
 
 btnBars.addEventListener('click', () => {
@@ -25,7 +25,13 @@ btnBars.addEventListener('click', () => {
 });
 
 //Funciones
-function crearNews(news) {
+class ShoppingCart {
+    constructor(parameters) {
+        
+    }
+}
+
+function createNews(news) {
     news.forEach( datos => {
         const {title, description, image} = datos;
         const newsCard = document.createElement('article');
@@ -43,7 +49,7 @@ function crearNews(news) {
     });
 };
 
-function crearGallery(gallery) {
+function createGallery(gallery) {
     gallery.forEach( datos => {
         const {description, image} = datos;
         const imgGallery = document.createElement('img');
@@ -54,7 +60,7 @@ function crearGallery(gallery) {
     });
 };
 
-function crearFeedbacks(feedbacks) {
+function createFeedbacks(feedbacks) {
     feedbacks.forEach( datos => {
         const {name, coment, position, image} = datos;
         const feedbackCard = document.createElement('article');
@@ -84,7 +90,7 @@ function crearFeedbacks(feedbacks) {
     });
 };
 
-function crearProducts(products) {
+function createProducts(products) {
     products.forEach( datos => {
         const {id, name, image, details, price} = datos;
         const productCard = document.createElement('div');
