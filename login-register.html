@@ -6,6 +6,7 @@
     <title>Tasty Foods: Login / Register</title>
     <link rel="stylesheet" href="css/register.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" href="imgs/combo-removebg-preview.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -17,11 +18,11 @@
             </article>
 
             <ul class="header__list">
-                <li class="list-items"><a class="footer__links" href="">Home</a></li>
-                <li class="list-items"><a class="footer__links" href="">Menu</a></li>
-                <li class="list-items"><a class="footer__links" href="">About Us</a></li>
-                <li class="list-items"><a class="footer__links" href="">Contact Us</a></li>
-                <li class="list-items"><a class="footer__links" href="">Login / Register</a></li>
+                <li class="list-items"><a class="footer__links" target="_blank" href="index.html">Home</a></li>
+                <li class="list-items"><a class="footer__links" target="_blank" href="">Menu</a></li>
+                <li class="list-items"><a class="footer__links" target="_blank" href="">About Us</a></li>
+                <li class="list-items"><a class="footer__links" target="_blank" href="">Contact Us</a></li>
+                <li class="list-items"><a class="footer__links" target="_blank" href="">Login / Register</a></li>
             </ul>
 
             <!-- <button class="btn btn-yellow" id="btn-order-online">
@@ -31,20 +32,24 @@
     </section>
 
 
-    <div class="wrapper">
+    <main class="wrapper">
+
         <div class="title-text">
             <div class="title login">Login Form</div>
             <div class="title signup">Signup Form</div>
         </div>
+
         <div class="form-container">
             <div class="slide-controls">
                 <input type="radio" name="slide" id="login" checked>
                 <input type="radio" name="slide" id="signup">
                 <label for="login" class="slide login">Login</label>
                 <label for="signup" class="slide signup">Signup</label>
-                <div class="slider-tab"></div>
-            </div>
+            <div class="slider-tab"></div>
+        </div>
+
         <div class="form-inner">
+
             <form action="#" class="login">
                 <div class="field">
                     <input type="text" placeholder="Email Address" required>
@@ -52,12 +57,13 @@
                 <div class="field">
                     <input type="password" placeholder="Password" required>
                 </div>
-                <div class="field btn">
+                <div class="field ">
                 <div class="btn-layer"></div>
                     <input type="submit" value="Login">
                 </div>
                 <div class="signup-link">Not a member? <a href="#">Signup now</a></div>
             </form>
+
             <form action="#" class="signup">
                 <div class="field">
                     <input type="text" placeholder="Email Address" required>
@@ -68,15 +74,16 @@
                 <div class="field">
                     <input type="password" placeholder="Confirm password" required>
                 </div>
-                <div class="field btn">
+                <div class="field boton">
                 <div class="btn-layer"></div>
                     <input type="submit" value="Signup">
                 </div>
             </form>
-        </div>
-        </div>
-    </div>
 
+            </div>
+        </div>
+
+    </main>
     <script  src="javascript/register.js"></script>
 </body>
 </html>

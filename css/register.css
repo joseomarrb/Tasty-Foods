@@ -11,20 +11,13 @@
 }
 
 body{
-    background-image: url(../imgs/fondo-abstracto-blanco_23-2148830546.avif);
+    background-image: url(https://img.freepik.com/vector-gratis/fondo-abstracto-blanco_23-2148831502.jpg?semt=ais_hybrid);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: var(--salsa);
 }
 
 .main__header{
@@ -59,6 +52,7 @@ body{
     font-weight: 600;
     text-align: center;
     transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    font-family: 'Salsa';
 }
 
 .wrapper .slide-controls {
@@ -74,6 +68,7 @@ body{
 }
 
 .slide-controls .slide {
+    font-family: 'Salsa';
     height: 100%;
     width: 100%;
     color: #fff;
@@ -102,6 +97,7 @@ body{
 }
 
 input[type="radio"] {
+
     display: none;
 }
 
@@ -182,6 +178,7 @@ input[type="radio"] {
 
 .form-inner form .pass-link a,
 .form-inner form .signup-link a {
+    font-family: var(--salsa);
     color: var(--red);
     text-decoration: none;
 }
@@ -191,28 +188,14 @@ input[type="radio"] {
     text-decoration: underline;
 }
 
-form .btn {
-    height: 50px;
-    width: 100%;
-    border-radius: 15px;
-    position: relative;
-    overflow: hidden;
+input[type='submit']{
+    font-family: 'Salsa';
+    cursor: pointer;
 }
 
-form .btn .btn-layer {
-    height: 100%;
-    width: 300%;
-    position: absolute;
-    left: -100%;
-    background: -webkit-linear-gradient(
-        right,
-        #003366,
-        #004080,
-        #0059b3,
-        #0073e6
-);
-    border-radius: 15px;
-    transition: all 0.4s ease;
+.field input[type='submit']:hover{
+    color: #fff;
+    background-color: var(--red);
 }
 
 form .btn:hover .btn-layer {

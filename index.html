@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tasty Foods</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" href="imgs/combo-removebg-preview.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -20,22 +21,22 @@
     </header>
 
     <!--MAIN SECTION-->
-    <main class="main ">
+    <main class="main " id="home">
         <section class="main__header">
             <article class="main__header__logo">
                 <h1>Tasty</h1>
             </article>
 
             <ul class="header__list">
-                <li class="list-items"><a class="footer__links" href="">Home</a></li>
-                <li class="list-items"><a class="footer__links" href="">Menu</a></li>
-                <li class="list-items"><a class="footer__links" href="">About Us</a></li>
-                <li class="list-items"><a class="footer__links" href="">Contact Us</a></li>
-                <li class="list-items"><a class="footer__links" href="">Login / Register</a></li>
+                <li class="list-items"><a class="footer__links" target="_blank" href="index.html">Home</a></li>
+                <li class="list-items"><a class="footer__links" target="_blank" href="#menu">Menu</a></li>
+                <li class="list-items"><a class="footer__links" target="_blank" href="#about">About Us</a></li>
+                <li class="list-items"><a class="footer__links" target="_blank" href="#footer">Contact Us</a></li>
+                <li class="list-items"><a class="footer__links" target="_blank" href="login-register.html" >Login / Register</a></li>
             </ul>
 
             <article class="buttons-container">
-                <button class="" id="calendary">
+                <button class="btnCarrito" >
                     <i class="fa-solid fa-bag-shopping"></i>
                 </button>
                 <button class="btn btn-yellow" id="btn-order-online">
@@ -44,20 +45,30 @@
             </article>
 
             <section class="nav__button">
+                <button class="btnCarrito">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                </button>
                 <button class="nav-buttons" id="button-bars">
                     <i class="fa-solid fa-bars"></i>
                 </button>
             </section>
 
-            <div class="dropdown-menu oculto">
-                <li class="list-items"><a class="footer__links" href="">Home</a></li>
-                <li class="list-items"><a class="footer__links" href="">Menu</a></li>
-                <li class="list-items"><a class="footer__links" href="">About Us</a></li>
-                <li class="list-items"><a class="footer__links" href="">Contact Us</a></li>
-                <li class="list-items"><a class="footer__links" href="">Login / Register</a></li>
-                <button class="" id="calendary">
-                    <i class="fa-solid fa-bag-shopping"></i>
-                </button>
+            <div class="cart-menu oculto">
+                <div class="buttons">
+                    <button class="" id="clear-cart-btn">Clear Cart</button>
+                    <button class="" id="buy-cart-btn">Buy Cart</button>
+                </div>
+                <div id="products-container"></div>
+                <p>Total number of items: <span id="total-items">0</span></p>
+                <p>Total: <span id="total">$0</span></p>
+            </div>  
+
+            <div class="dropdown-menu  oculto">
+                <li class="list-items"><a class="footer__links" href="index.html">Home</a></li>
+                <li class="list-items"><a class="footer__links" href="#menu">Menu</a></li>
+                <li class="list-items"><a class="footer__links" href="#about">About Us</a></li>
+                <li class="list-items"><a class="footer__links" href="#footer">Contact Us</a></li>
+                <li class="list-items"><a class="footer__links" href="login-register.html">Login / Register</a></li>
             </div>  
         </section>
 
@@ -152,7 +163,7 @@
     </section>
 
     <!-- ABOUT SECTION -->
-    <section class="about content-container">
+    <section class="about content-container" id="about">
         <article class="text-container">
             <p class="name-sc-title">
                 About Tasty <span class="name-sc-title-span">Foods</span>
@@ -201,7 +212,7 @@
     </section>
 
     <!--POPULAR SECTION-->
-    <section class="main padding">
+    <section class="main padding" id="menu">
         <section class="main__content">
             <article class="text-container">
                 <p class="name-sc-title">
@@ -264,7 +275,7 @@
     </section>
 
     <!--FOOTER SECTION-->
-    <footer>
+    <footer id="footer">
         <section class="products">
             <section class="information-sc">
                 <article class="details-sc">
@@ -276,11 +287,11 @@
 
                 <article class="details-sc">
                     <p class="dt-name">Quick Links</p>
-                    <a class="footer__links" href="">Home</a>
-                    <a class="footer__links" href="">Menu</a>
-                    <a class="footer__links" href="">About Us</a>
-                    <a class="footer__links" href="">Contact Us</a>
-                    <a class="footer__links" href="">Login/Register</a>
+                    <a class="footer__links" href="#home">Home</a>
+                    <a class="footer__links" href="#menu">Menu</a>
+                    <a class="footer__links" href="#about">About Us</a>
+                    <a class="footer__links" href="#footer">Contact Us</a>
+                    <a class="footer__links" href="login-register.html">Login/Register</a>
                 </article>
 
                 <article class="details-sc">

@@ -8,12 +8,29 @@ const btnBars = document.querySelector('#button-bars');
 const dropdown = document.querySelector('.dropdown-menu');
 const btnClose = document.querySelector('#button-bars i');
 
+const productsContainer = document.querySelector('#products-container');
+const btnClearCart = document.querySelector('#clear-cart-btn');
+const btnBuyCart = document.querySelector('#buy-cart-btn');
+const totalItems = document.querySelector('#total-items');
+const total = document.querySelector('#total');
+
+
 //Eventos
 document.addEventListener("DOMContentLoaded", () => {
     createNews(news); 
     createGallery(gallery); 
     createFeedbacks(feedbacks);
     createProducts(products);
+
+    const carritoButtons = document.querySelectorAll('.btnCarrito');
+    const cartMenu = document.querySelector('.cart-menu');
+    
+    carritoButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            cartMenu.classList.toggle('oculto');
+        });
+    });
+    
 });
 
 btnBars.addEventListener('click', () => {
@@ -24,13 +41,9 @@ btnBars.addEventListener('click', () => {
     : 'fa-solid fa-x';
 });
 
-//Funciones
-class ShoppingCart {
-    constructor(parameters) {
-        
-    }
-}
 
+
+//Funciones
 function createNews(news) {
     news.forEach( datos => {
         const {title, description, image} = datos;
@@ -121,3 +134,51 @@ function createProducts(products) {
         productsSection.appendChild(productCard);
     });
 }
+class ShoppingCart {
+    constructor() {
+        this.item = [];
+        this.total = 0;
+    }
+
+    addItem(id, products) {
+        const product = products.find( item => item.id === id);
+        const { name, price } = product;
+        this.item.push(product);
+    }
+
+    getCounts(){
+        return this.item.length;
+    }
+
+    buyCart() {
+        const isCartCleared = confirm("Are you sure you want to purchase all items from your shopping cart?");
+
+        if (isCartCleared){
+            alert('Thank you for you purchase :D');
+            return;
+        }
+    }
+
+    clearCart() {
+        if (!this.item.length) {
+            alert("Your shopping cart is already empty");
+            return;
+        }
+
+        const isCartCleared = confirm("Are you sure you want to clear all items from your shopping cart?");
+
+        if (isCartCleared){
+            this.item = [];
+            this.total = 0;
+            productsContainer.innerHTML = "";
+            totalNumberOfItems.textContent = 0;
+        }
+    }
+}
+
+const cart = new ShoppingCart();
+
+btnClearCart.addEventListener('click', cart.clearCart.bind(cart));
+btnBuyCart.addEventListener('click', cart.buyCart.bind(cart));
+
+

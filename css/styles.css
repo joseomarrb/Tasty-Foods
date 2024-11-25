@@ -14,7 +14,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* font-family: sans-serif; */
+    font-family: sans-serif;
 }
 
 body{
@@ -39,7 +39,8 @@ body{
 }
 
 .nav__button {
-    display: block;
+    display: flex;
+    align-items: center;
 }
 
 .nav-buttons{
@@ -140,7 +141,7 @@ h1{
     cursor: pointer;
 }
 
-#calendary{
+.btnCarrito{
     cursor: pointer;
     width: 45px;
     height: 45px;
@@ -148,6 +149,11 @@ h1{
     background-color: #fff;
     border-color: #0003;
     border-radius: 50%;
+}
+
+.btnCarrito:hover{
+    background-color: var(--red);
+    color: #fff;
 }
 
 .main__content{
@@ -254,7 +260,7 @@ h1{
 .dropdown-menu{
     width: 100%;
     max-width: 300px;
-    height: 50vh;
+    height: 40vh;
     position: absolute;
     top: 150px;
     right: 30px;
@@ -268,6 +274,65 @@ h1{
     background-color: #fff;
     border: thin solid #000;
     box-shadow: 8px 8px 12px 0px #0007;
+}
+
+.cart-menu{
+    position: absolute;
+    width: 100%;
+    max-width: 300px;
+    height: 40vh;
+    top: 150px;
+    right: 30px;
+    text-align: center;
+    margin: 8px;
+    border-radius: 20px;
+    flex-direction: column;
+    background-color: #fff;
+    border: thin solid #000;
+    box-shadow: 8px 8px 12px 0px #0007;
+    overflow-y: auto;
+}
+
+.cart-menu p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.cart-menu span{
+    margin: 8px;
+    font-size: 16px;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 2px    ;
+}
+
+#clear-cart-btn{
+    width: 100%;
+    border-radius: 20px 0px 0 0;
+    border: none;
+    border-bottom: thin solid #000;
+    border-right: thin solid #000;
+    height: 40px;
+    background-color: var(--yellow);
+    font-size: 16px;
+    cursor: pointer;
+
+}
+
+#buy-cart-btn{
+    width: 100%;
+    border-radius: 0px 20px 0 0;
+    border: none;
+    border-bottom: thin solid #000;
+    border-left: thin solid #000;
+    height: 40px;
+    background-color: greenyellow;
+    font-size: 16px;
+    cursor: pointer;
 }
 
 .visible{
@@ -338,7 +403,11 @@ h1{
 }
 
 .about{
+    justify-content: center;
+    display: flex;
     padding: 14px;
+    flex-direction: column;
+    align-items: center;
 }
 
 .about .welcome{
@@ -388,12 +457,6 @@ h1{
 .popular-btn:hover{
     background-color: var(--red);
     color: #fff;
-}
-
-#calendary:hover{
-    background-color: var(--red);
-    color: #fff;
-
 }
 
 .popular__img{
@@ -486,8 +549,6 @@ h1{
     width: 100%;
     max-width: 900px;
 }
-
-
 
 /*POPULAR SECTION*/
 
