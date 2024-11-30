@@ -31,6 +31,15 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
     
+    const addToCartBtns = document.getElementsByClassName("add-to-cart-btn");
+    [...addToCartBtns].forEach(
+        (btn) => {
+          btn.addEventListener("click", (event) => {
+            cart.addItem(Number(event.target.id), products);
+            totalItems.textContent = cart.getCounts();
+          })
+        }
+    );
 });
 
 btnBars.addEventListener('click', () => {
@@ -127,7 +136,7 @@ function createProducts(products) {
                 <p class="popular-price">$${price}</p>
 
                 <div class="popular-buttons">
-                    <button id='${id}' class="btn btn-secundary popular-btn"><i class="fa-solid fa-bag-shopping"></i>Add to Cart</button>
+                    <button id='${id}' class="btn btn-secundary popular-btn add-to-cart-btn"><i class="fa-solid fa-bag-shopping"></i>Add to Cart</button>
                 </div>
             </article>
         `;
@@ -136,14 +145,33 @@ function createProducts(products) {
 }
 class ShoppingCart {
     constructor() {
-        this.item = [];
+        this.items = [];
         this.total = 0;
     }
 
     addItem(id, products) {
         const product = products.find( item => item.id === id);
         const { name, price } = product;
-        this.item.push(product);
+        this.items.push(product);
+
+        const totalCountPerProduct = {};
+        this.items.forEach((dessert) => {
+          totalCountPerProduct[dessert.id] = (totalCountPerProduct[dessert.id] || 0) + 1;
+        })
+    
+        const currentProductCount = totalCountPerProduct[product.id];
+        const currentProductCountSpan = document.getElementById(`product-count-for-id${id}`);
+    
+        currentProductCount > 1 
+          ? currentProductCountSpan.textContent = `${currentProductCount}x`
+          : productsContainer.innerHTML += `
+          <div id="dessert${id}" class="product">
+            <p>
+              <span class="product-count" id="product-count-for-id${id}"></span>${name}
+            </p>
+            <p>${price}</p>
+          </div>
+          `;
     }
 
     getCounts(){
@@ -160,7 +188,7 @@ class ShoppingCart {
     }
 
     clearCart() {
-        if (!this.item.length) {
+        if (!this.items.length) {
             alert("Your shopping cart is already empty");
             return;
         }
@@ -168,10 +196,10 @@ class ShoppingCart {
         const isCartCleared = confirm("Are you sure you want to clear all items from your shopping cart?");
 
         if (isCartCleared){
-            this.item = [];
+            this.items = [];
             this.total = 0;
             productsContainer.innerHTML = "";
-            totalNumberOfItems.textContent = 0;
+            totalItems.textContent = 0;
         }
     }
 }

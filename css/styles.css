@@ -22,6 +22,19 @@ body{
     height: 100vh;
 }
 
+.product {
+  margin: 25px 0;
+}
+
+.product-count {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.product-category {
+  margin: 10px 0;
+}
+
 .header {
     display: flex;
     padding: 10px 25px;
