@@ -34,10 +34,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const addToCartBtns = document.getElementsByClassName("add-to-cart-btn");
     [...addToCartBtns].forEach(
         (btn) => {
-          btn.addEventListener("click", (event) => {
-            cart.addItem(Number(event.target.id), products);
-            totalItems.textContent = cart.getCounts();
-          })
+            btn.addEventListener("click", (event) => {
+                cart.addItem(Number(event.target.id), products);
+                totalItems.textContent = cart.getCounts();
+                cart.calculateTotal();
+            })
         }
     );
 });
@@ -154,28 +155,31 @@ class ShoppingCart {
         const { name, price } = product;
         this.items.push(product);
 
+        this.total += price; 
+        this.calculateTotal();
+
         const totalCountPerProduct = {};
         this.items.forEach((dessert) => {
-          totalCountPerProduct[dessert.id] = (totalCountPerProduct[dessert.id] || 0) + 1;
+            totalCountPerProduct[dessert.id] = (totalCountPerProduct[dessert.id] || 0) + 1;
         })
     
         const currentProductCount = totalCountPerProduct[product.id];
         const currentProductCountSpan = document.getElementById(`product-count-for-id${id}`);
     
         currentProductCount > 1 
-          ? currentProductCountSpan.textContent = `${currentProductCount}x`
-          : productsContainer.innerHTML += `
-          <div id="dessert${id}" class="product">
-            <p>
-              <span class="product-count" id="product-count-for-id${id}"></span>${name}
-            </p>
-            <p>${price}</p>
-          </div>
-          `;
+        ? currentProductCountSpan.textContent = `${currentProductCount}x`
+        : productsContainer.innerHTML += `
+            <div id="dessert${id}" class="product">
+                <p>
+                    <span class="product-count" id="product-count-for-id${id}"></span>${name}
+                </p>
+                <p>${price}</p>
+            </div>
+        `;
     }
 
     getCounts(){
-        return this.item.length;
+        return this.items.length;
     }
 
     buyCart() {
@@ -200,7 +204,13 @@ class ShoppingCart {
             this.total = 0;
             productsContainer.innerHTML = "";
             totalItems.textContent = 0;
+            total.textContent = 0.00;
         }
+    }
+
+    calculateTotal() {
+        total.textContent = `$${this.total.toFixed(2)}`;
+        return this.total;
     }
 }
 
