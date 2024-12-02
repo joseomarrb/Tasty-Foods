@@ -288,6 +288,19 @@ h1{
     border: thin solid #000;
     box-shadow: 8px 8px 12px 0px #0007;
 }
+.list-product{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.dessert-description{
+    font-weight: 800;
+}
+
 
 .cart-menu{
     position: absolute;
@@ -308,13 +321,14 @@ h1{
 
 .cart-menu p {
     margin: 10px 0;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .cart-menu span{
-    margin: 8px;
-    font-size: 16px;
+    margin: 5px;
+    font-size: 20px;
 }
+
 
 .buttons{
     display: flex;
@@ -777,41 +791,41 @@ h1{
 
     /* Header */
     .main__header {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 1rem 2rem;
     }
 
     .about__list{
         align-items: start;
         font-size: 22px;
     }
-  
+
     .header__list {
-      display: flex;
-      gap: 2rem;
+        display: flex;
+        gap: 2rem;
     }
-  
+
     .nav__button {
-      display: none;
+        display: none;
     }
 
     .dropdown-menu{
         display: none;
     }
-  
+
     .buttons-container {
-      display: flex;
-      gap: 1rem;
+        display: flex;
+        gap: 1rem;
     }
-  
+
     /* Main Content */
     .main__content {
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-      padding: 2rem;
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        padding: 2rem;
     }
 
     .content-container{
@@ -821,43 +835,43 @@ h1{
         justify-content: center;
         gap: 0;
     }
-  
+
     .main__text {
-      flex: 1;
+        flex: 1;
     }
-  
+
     .main__img__container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      max-width: 900px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 900px;
     }
-  
+
     /* Products Section */
     .products {
-      /* display: grid; */
-      /* grid-template-columns: repeat(6, 1fr); */
-      gap: 1rem;
-      padding: 2rem;
+        /* display: grid; */
+        /* grid-template-columns: repeat(6, 1fr); */
+        gap: 1rem;
+        padding: 2rem;
     }
-  
+
     /* Color Cards Section */
     .color-cards {
-      flex-direction: row;
-      justify-content: center;
+        flex-direction: row;
+        justify-content: center;
     }
-  
+
     .color__card {
-      flex: 1;
-      height: 340px;
+        flex: 1;
+        height: 340px;
     }
-  
+
     /* About Section */
     .about {
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-      padding: 2rem;
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        padding: 2rem;
     }
 
     .text-container--main{
@@ -865,7 +879,7 @@ h1{
         align-items: start;
         text-align: start;
     }
-  
+
     .text__paragraph--main{
         text-align: start;
     }
@@ -876,17 +890,17 @@ h1{
     }
     /* Delivery Section */
     .products--delivery {
-      grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
     }
-  
+
     /* Popular Section */
     .popular__content-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin-bottom: 2rem;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-bottom: 2rem;
     }
-  
+
     .popular-cards-container {
         flex-wrap: wrap;
         flex-direction: row;
@@ -898,13 +912,13 @@ h1{
     .feedback-cards {
         flex-direction: row;
     }
-  
+
     /* News Section */
     .news-sc {
         flex-direction: row;
         gap: 4rem;
     }
-  
+
     /* Gallery Section */
     .gallery-imgs {
         display: grid;
