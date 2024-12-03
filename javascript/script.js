@@ -41,6 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
             })
         }
     );
+
 });
 
 btnBars.addEventListener('click', () => {
@@ -51,9 +52,25 @@ btnBars.addEventListener('click', () => {
     : 'fa-solid fa-x';
 });
 
+document.querySelectorAll('.filter-btn').forEach(
+    button => { 
+        button.addEventListener('click', (event) => { 
+        const category = event.target.getAttribute('data-category');
+        filtrarProducto(category); 
+    })
+}); 
 
 
 //Funciones
+function filtrarProducto(category) {
+    if (category === 'all') {
+        createProducts(products)
+    } else {
+        const filtradoDeProductos = products.filter(product => product.category === category)
+        createProducts(filtradoDeProductos)
+    }
+};
+
 function createNews(news) {
     news.forEach( datos => {
         const {title, description, image} = datos;
@@ -114,6 +131,8 @@ function createFeedbacks(feedbacks) {
 };
 
 function createProducts(products) {
+    limpiarHTML();
+
     products.forEach( datos => {
         const {id, name, image, details, price} = datos;
         const productCard = document.createElement('div');
@@ -144,6 +163,13 @@ function createProducts(products) {
         productsSection.appendChild(productCard);
     });
 }
+
+const limpiarHTML = () => {
+    while (productsSection.firstChild) {
+        productsSection.removeChild( productsSection.firstChild );
+    }
+};
+
 class ShoppingCart {
     constructor() {
         this.items = [];

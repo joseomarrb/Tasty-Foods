@@ -60,55 +60,63 @@ const products = [
         name: 'Frenchy Fry',
         details: 'Get a 20% Discount On First Order',
         price: 10.90,
-        image: 'imgs/papas.webp'
+        image: 'imgs/papas.webp',
+        category: 'burger'
     },
     {
         id: 2,
         name: 'Pasta',
         details: 'Get a 20% Discount On First Order',
         price: 14.90,
-        image: 'imgs/pasta-removebg-preview.png'
+        image: 'imgs/pasta-removebg-preview.png',
+        category: 'pasta'
     },
     {
         id: 3,
         name: 'Sandwich',
         details: 'Get a 20% Discount On First Order',
         price: 7.90,
-        image: 'imgs/sandwich.png'
+        image: 'imgs/sandwich.png',
+        category: 'sandwich'
     },
     {
         id: 4,
         name: 'Spicy Burger',
         details: 'Get a 20% Discount On First Order',
         price: 11.90,
-        image: 'imgs/hamburguesa-removebg-preview.png'
+        image: 'imgs/hamburguesa-removebg-preview.png',
+        category: 'burger'
     },
     {
         id: 5,
         name: 'Cold Drinks',
         details: 'Get a 20% Discount On First Order',
         price: 8.90,
-        image: 'imgs/food-cola-removebg-preview.png'
+        image: 'imgs/food-cola-removebg-preview.png',
+        category: 'cold-drinks'
     },
     {
         id: 6,
         name: 'Combo 1',
         details: 'Get a 20% Discount On First Order',
         price: 15.90,
-        image: 'imgs/popular-combo1.png'
+        image: 'imgs/popular-combo1.png',
+        category: 'combo'
     },
     {
         id: 7,
         name: 'Combo 2',
         details: 'Get a 20% Discount On First Order',
         price: 14.90,
-        image: 'imgs/popular-combo2.jpg'
+        image: 'imgs/popular-combo2.jpg',
+        category: 'combo'
     },
     {
         id: 8,
         name: 'Combo 3',
         details: 'Get a 20% Discount On First Order',
         price: 16.90,
-        image: 'imgs/popular-combo3.webp'
+        image: 'imgs/popular-combo3.webp',
+        category: 'combo'
     },
 ];
