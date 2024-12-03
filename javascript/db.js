@@ -65,7 +65,7 @@ const products = [
     },
     {
         id: 2,
-        name: 'Pasta',
+        name: 'Fusilli',
         details: 'Get a 20% Discount On First Order',
         price: 14.90,
         image: 'imgs/pasta-removebg-preview.png',
@@ -73,7 +73,7 @@ const products = [
     },
     {
         id: 3,
-        name: 'Sandwich',
+        name: 'Sandwich Clásico',
         details: 'Get a 20% Discount On First Order',
         price: 7.90,
         image: 'imgs/sandwich.png',
@@ -89,11 +89,11 @@ const products = [
     },
     {
         id: 5,
-        name: 'Cold Drinks',
+        name: 'Coca Cola',
         details: 'Get a 20% Discount On First Order',
         price: 8.90,
         image: 'imgs/food-cola-removebg-preview.png',
-        category: 'cold-drinks'
+        category: 'drinks'
     },
     {
         id: 6,
@@ -118,5 +118,165 @@ const products = [
         price: 16.90,
         image: 'imgs/popular-combo3.webp',
         category: 'combo'
+    },
+    {
+        id: 9,
+        name: 'Batido Caramelo',
+        details: 'Get a 20% Discount On First Order',
+        price: 10.90,
+        image: 'imgs/bebidafria1-removebg-preview.png',
+        category: 'drinks'
+    },
+    {
+        id: 10,
+        name: 'Tallarines',
+        details: 'Get a 20% Discount On First Order',
+        price: 15.90,
+        image: 'imgs/pasta2-removebg-preview.png',
+        category: 'pasta'
+    },
+    {
+        id: 11,
+        name: 'Ravioli',
+        details: 'Get a 20% Discount On First Order',
+        price: 10.90,
+        image: 'imgs/pasta3-removebg-preview.png',
+        category: 'pasta'
+    },
+    {
+        id: 12,
+        name: 'Spaghetti',
+        details: 'Get a 20% Discount On First Order',
+        price: 12.90,
+        image: 'imgs/pasta4-removebg-preview.png',
+        category: 'pasta'
+    },
+    {
+        id: 13,
+        name: 'Pizza de Quezo',
+        details: 'Get a 20% Discount On First Order',
+        price: 25.90,
+        image: 'imgs/pizza1-removebg-preview.png',
+        category: 'pizza'
+    },
+    {
+        id: 14,
+        name: 'Pizza Napolitana',
+        details: 'Get a 20% Discount On First Order',
+        price: 17.90,
+        image: 'imgs/pizza2-removebg-preview.png',
+        category: 'pizza'
+    },
+    {
+        id: 16,
+        name: 'Pizza Hawaiana',
+        details: 'Get a 20% Discount On First Order',
+        price: 24.90,
+        image: 'imgs/pizza3-removebg-preview.png',
+        category: 'pizza'
+    },
+    {
+        id: 17,
+        name: 'Pizza Marinara',
+        details: 'Get a 20% Discount On First Order',
+        price: 20.90,
+        image: 'imgs/pizza4-removebg-preview.png',
+        category: 'pizza'
+    },
+    {
+        id: 18,
+        name: 'Burger de Pollo',
+        details: 'Get a 20% Discount On First Order',
+        price: 10.90,
+        image: 'imgs/burger3-removebg-preview.png',
+        category: 'burger'
+    },
+    {
+        id: 19,
+        name: 'Burger Clásica',
+        details: 'Get a 20% Discount On First Order',
+        price: 9.90,
+        image: 'imgs/burger4-removebg-preview.png',
+        category: 'burger'
+    },
+    {
+        id: 20,
+        name: 'Burger de Pavo',
+        details: 'Get a 20% Discount On First Order',
+        price: 8.90,
+        image: 'imgs/burger5-removebg-preview.png',
+        category: 'burger'
+    },
+    {
+        id: 21,
+        name: 'Burger BBQ',
+        details: 'Get a 20% Discount On First Order',
+        price: 10.90,
+        image: 'imgs/burger2jpg-removebg-preview.png',
+        category: 'burger'
+    },
+    {
+        id: 22,
+        name: 'Combo 4',
+        details: 'Get a 20% Discount On First Order',
+        price: 23.90,
+        image: 'imgs/combo1-removebg-preview.png',
+        category: 'combo'
+    },
+    {
+        id: 23,
+        name: 'Combo 5',
+        details: 'Get a 20% Discount On First Order',
+        price: 9.90,
+        image: 'imgs/combo2-removebg-preview.png',
+        category: 'combo'
+    },
+    {
+        id: 24,
+        name: 'Batido Mixto',
+        details: 'Get a 20% Discount On First Order',
+        price: 10.90,
+        image: 'imgs/bebidafria4-removebg-preview.png',
+        category: 'drinks'
+    },
+    {
+        id: 25,
+        name: 'Batido Fresa',
+        details: 'Get a 20% Discount On First Order',
+        price: 8.90,
+        image: 'imgs/bebidafria2-removebg-preview.png',
+        category: 'drinks'
+    },
+    {
+        id: 25,
+        name: 'Sandwich Cubano',
+        details: 'Get a 20% Discount On First Order',
+        price: 10.90,
+        image: 'imgs/sandwich1-removebg-preview.png',
+        category: 'sandwich'
+    },
+    {
+        id: 26,
+        name: 'Sandwich Montadito',
+        details: 'Get a 20% Discount On First Order',
+        price: 13.90,
+        image: 'imgs/sandwich2-removebg-preview.png',
+        category: 'sandwich'
+    },
+    {
+        id: 27,
+        name: 'Sandwich Mixto',
+        details: 'Get a 20% Discount On First Order',
+        price: 11.90,
+        image: 'imgs/sandwich3-removebg-preview.png',
+        category: 'sandwich'
+    },
+    {
+        id: 27,
+        name: 'Sandwich Milanesa',
+        details: 'Get a 20% Discount On First Order',
+        price: 8.90,
+        image: 'imgs/sandwich4-removebg-preview.png',
+        category: 'sandwich'
     },
 ];
